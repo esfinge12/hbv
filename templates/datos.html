@@ -1,0 +1,47 @@
+<nav class='navbar navbar-inverse navbar-fixed-top'>
+  <div class='container'>
+    <div class='navbar-header'>
+      <a class='navbar-brand' href=''>Pruebas CSS</a>
+    </div>
+    <!--div id='navbar' class='collapse navbar-collapse'>
+      <ul class='nav navbar-nav'>
+        <li class='active'><a href='/'>Opcion 1</a></li>
+        <li><a href='/'>Opcion 2</a></li>
+        <li><a href='/'>Opcion 3</a></li>
+      </ul>
+    </div--><!--/.nav-collapse -->
+  </div>
+</nav>
+<div class='container'>
+  <div class='starter-template'>
+    <h1>{{ctrl.mensaje}} <i class='material-icons'>sentiment_dissatisfied</i></h1>
+    <p class='lead'>Mientras tanto me toca entrar por el faro
+      <i class='material-icons'>sentiment_very_dissatisfied</i>
+      <i class='material-icons'>sentiment_very_dissatisfied</i>
+      <i class='material-icons'>sentiment_very_dissatisfied</i>
+    </p>
+  </div>
+</div>
+<div class='container'>
+  <p class='lead'>
+    - ngDialog con el select(md-select):
+    <button class='btn btn-primary' ng-click='ctrl.abrirNgDialog()' >Probar</button>
+  </p>
+  <p class='lead'>
+    - mgDialog con el select(md-select):
+    <button class='btn btn-primary' ng-click='ctrl.abrirMgDialog($event)' >Probar</button>
+  </p>
+</div>
+
+<script type="text/ng-template" id='templateId'>
+	<!--div ng-include='ctrl.URLModalEdificio'></div-->
+  <div>
+    <h2>Elige edificio</h2>
+    <md-select ng-model='elemento' aria-label='Lista de edificios' >
+      <md-option ng-repeat='obj in ctrl.lista track by $index' ng-value='obj'>{{obj}}</md-option>
+    </md-select>
+    <button id='target' class='btn btn-primary' ng-click='closeThisDialog()'href="">
+      Cerrar
+    </button>
+  </div>
+</script>

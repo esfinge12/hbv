@@ -1,0 +1,11 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+.modalObservaciones{
+  min-width: 600px;
+  min-height: 300px;
+}
